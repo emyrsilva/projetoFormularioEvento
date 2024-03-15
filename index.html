@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-query.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Formulário Evento</title>
+</head>
+<body>
+    <header>
+        <div id="cabecalho">
+            <h1>Crie e compartilhe seu evento.</h1>
+            <p>O primeiro passo, é preencher esse formulário de inscrição.</p>
+        </div>
+    <header>
+    
+    <main>
+        <form id="informacoes">
+            <div class="informacoesDoEvento">
+                <h2>Informações do Evento</h2>
+
+                <div id="line"><div>
+
+                <div class="input">
+                    <label for="titulo">Título do evento <span>(minimo 8 caracteres)</span></label>
+                    <input id="titulo" name="titulo" type="text" required minlength="8" required>
+                </div>
+
+                <div class="input">
+                    <label for="linkEvento">link do evento <span>(comece com https://)</span></label>
+                    <input id="linkEvento" name="linkEvento" type="url" required>
+                </div>
+
+                <div class="input">
+                    <label for="whatsapp">Whatsapp para contato <span>(somento números)</span></label>
+                    <input id="whatsapp" name="whatsapp" type="number" required>
+                </div>
+
+                <div class="input">
+                    <label for="informacoesExtra">Informacoes Extra</label>
+                    <textarea id="informacoesExtra" name="informacoesExtra"  rows="6" required></textarea>
+                </div>
+
+                <div class="input">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria" required>
+                        <option value="live">Ao vivo</option>
+                        <option value="podcast">Podcast</option>
+                        <option value="mentorship">Mentoria</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="privacidade">
+                <h2>Privacidade</h2>
+                
+                <div id="line"><div>
+
+                <div class="input">
+                    <label for="email">E-mail do administrador <span>((digite um email válido))</span></label>
+                    <input id="email" name="email" type="email" required>
+                </div>
+
+                <div class="input">
+                    <label for="senha">Senha de acesso para os participantes <span>(minimo 8 caracteres)</span></label>
+                    <input id="senha" name="senha" type="password" required minlength="8" required>
+                </div>
+
+                <div class="inputCheckbox">
+                    <input id="checkbox" name="checkbox" type="checkbox" required>
+                    <label for="checkbox">Evento privado</label>                                        
+                </div>
+            </div>
+
+            <div class="horarios">
+                <h2>Dia e Hora</h2>
+
+                <div id="line"><div>
+
+                <div class="colunas">
+                    <div class="input">
+                        <label for="dataEvento">Data</label>
+                        <input id="dataEvento" name="dataEvento" type="date" required>
+                    </div>
+                    <div class="input">
+                        <label for="inicioEvento">Das</label>
+                        <input id="inicioEvento" name="inicioEvento" type="time" required>
+                    </div>
+                    <div class="input">
+                        <label for="fimEvento">Das</label>
+                        <input id="fimEvento" name="fimEvento" type="time" required>
+                    </div>
+                </div>
+            </div>
+        </form>        
+    </main>
+    <footer>
+        <button class="botaoEvento" type="submit">Salvar evento</button>
+    </footer>
+</body>
+</html>

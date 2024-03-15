@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+:root{
+    --fonte-archivo: "Archivo", sans-serif;
+    --fonte-poppins:  "Poppins", sans-serif;
+    
+    --bg-body: #E5E5E5;
+    --bg-body-before: #121214;
+    --bg-main: #FAFAFC;
+    --bg-botao: #04D361;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-body);
+    font-family: var(--fonte-poppins);
+    width: 736px;
+    margin: auto;
+}
+
+body::before{
+    content:" ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 368px;   
+    background-color: var(--bg-body-before);
+}
+
+#cabecalho{
+    margin-top: 80px;
+    width: 319px;
+}
+
+header h1{
+    font-family: var(--fonte-archivo);
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 42px;
+    color: #FFFFFF;
+    padding-bottom: 24px;
+}
+
+header p{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 26px;
+    color: #42D3FF;
+}
+    
+main #informacoes{
+    width: 736px;
+    height: 1390px;
+    background-color: var(--bg-main);
+    border-radius: 20px 20px 0px 0px;
+    padding: 64px;
+    margin-top: 54px;
+}
+
+form h2{
+    font-family: var(--fonte-archivo);
+    font-size: 24px;
+    font-weight: semibold;
+    line-height: 34px;
+    color: #32264D;
+    padding-bottom: 16px;
+}
+
+form #line{
+    width: 608px;
+    height: 0px;
+    border: 1px solid #E6E6F0;
+    margin-bottom: 16px;
+}
+
+form .input{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 24px 0px 0px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+    color: #4E4958;
+}
+
+form span{
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+    color: #C1BCCC;
+}
+
+form input, #categoria{
+    width: 608px;
+    height: 56px;
+    background-color: var(--bg-main);
+    border: 1px solid #C1BCCC;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #4E4958;
+}
+
+form input[type=number]::-webkit-inner-spin-button{ 
+    -webkit-appearance: none;  
+}
+
+form #informacoesExtra{
+    width: 608px;
+    background-color: var(--bg-main);
+    border: 1px solid #C1BCCC;
+    border-radius: 5px;
+    font-family: var(--fonte-poppins);
+    font-size: 16px;
+    line-height: 26px;
+    color: #4E4958;
+}
+
+main .privacidade, .horarios{
+    padding: 48px 0px 48px 0px;    
+}
+
+form .inputCheckbox label{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 0px 0px;
+    font-size: 14px;
+    font-weight: normal;    
+    color: #4E4958;
+}
+
+.inputCheckbox input[type="checkbox"]{
+    /* Esconde o checkbox padrão, que fica no meio e sem estilização */
+    opacity: 0;
+    position: absolute;
+} 
+
+.inputCheckbox input[type="checkbox"]:checked + label:before{
+    /* Estilização personalizada do checkbox quando estiver marcado */
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1101_20)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1101_20'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E ");
+}
+
+.inputCheckbox input[type="checkbox"] + label:before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #4E4958;
+    border-radius: 8px;
+  }
+
+main .horarios #dataEvento, #inicioEvento, #fimEvento{
+    font-family: var(--fonte-poppins);
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+}
+
+.colunas {
+    /* Cria espaçamento e tamanho desejados das colunas */
+    display: grid;
+    grid-template-columns: 43% 25% 25%;
+    grid-column-gap: 20px;
+}
+
+.colunas input {
+    /* Garante que o input ocupe toda a largura da sua div pai */
+    width: 100%; 
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 736px;
+    height: 136px;
+    margin: 1px 0px 48px;
+    background-color: #F0F0F4;
+    border-radius: 0px 0px 20px 20px;
+}
+
+footer .botaoEvento{
+    width: 608px;
+    height: 56px;
+    background-color: var(--bg-botao);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--fonte-archivo);
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    cursor: pointer;
+}

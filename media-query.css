@@ -1,0 +1,36 @@
+@media screen and (max-width: 600px) { 
+    body{
+        width: 300px;
+    }
+
+    #cabecalho{
+        margin-top: 60px;
+        width: 300px;
+    }
+
+    main #informacoes{
+        width: 300px;
+        height: 1310px;
+        padding: 34px 24px;
+    }
+
+    form #line, form #informacoesExtra{
+        width: 252px;
+    }
+
+    form input, #categoria, #informacoesExtras, footer .botaoEvento{
+        width: 252px;
+        height: 36px;
+    }
+
+    .colunas {
+        grid-template-columns: 39% 25% 25%;
+        grid-column-gap: 13px;
+    }
+
+    footer{
+        width: 300px;
+        height: 96px;
+    }
+
+}
